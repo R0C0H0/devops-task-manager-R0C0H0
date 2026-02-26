@@ -2,16 +2,12 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-const express = require('express');
-const app = express();
-app.use(express.json());
-
 
 const tasksRouter = require('./routes/tasks');
 
+
 app.get('/', (req, res) => {
   res.json({ message: "Welcome from MAIN branch" });
-
 });
 
 
