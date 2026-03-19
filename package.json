@@ -11,6 +11,6 @@
     "express": "^4.22.1"
   },
   "devDependencies": {
-    "jest": "file:jest-30.3.0.tgz"
+    "jest": "^30.3.0"
   }
 }
