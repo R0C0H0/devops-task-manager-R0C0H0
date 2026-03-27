@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  # API service (Task Manager backend)
+  api:
+    image: ghcr.io/r0c0h0/task-manager-api:prod   
+    ports:
+      - "3000:3000"   # Expose API on localhost:3000
+    depends_on:
+      - db
+    environment:
+      - MONGO_URL=mongodb://db:27017/tasksdb
+
+  # Database service (MongoDB)
+  db:
+    image: mongo:6
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
